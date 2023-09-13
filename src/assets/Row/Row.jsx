@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './Row.css';
-import Movie from './Movie';
+import Movie from './movie';
 
 const Row = ({ title, movies }) => {
   // console.log(movies);
