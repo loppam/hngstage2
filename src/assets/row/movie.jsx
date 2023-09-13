@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-
-const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
 import { Link } from 'react-router-dom';
 import imdb from '../../Images/imdb.png';
 import tomat from '../../Images/tomat.png';
+const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
+
 
 const Movie = ({ title, poster_path, vote_average,id, release_date }) => {
   let vote = vote_average / 10 * 100;

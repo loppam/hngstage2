@@ -2,7 +2,7 @@
 import { useState } from "react";
 import menu from "../../Images/Menu.png";
 import tv from "../../Images/tv.png";
-import "./Nav.css";
+import "./nav.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

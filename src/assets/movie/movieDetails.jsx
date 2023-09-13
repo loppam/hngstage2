@@ -5,7 +5,7 @@ import leftSide from "../../Images/Group21.png";
 import ads from "../../Images/Group52.png";
 import rate from "../../Images/Group55.png";
 import bottom from "../../Images/Group61.png";
-import "./MovieDetails.css";
+import "./movieDetails.css";
 import { useEffect, useState } from "react";
 const API_KEY = "5cedf290c2dd581f3b1b6ed4c6562713";
 
