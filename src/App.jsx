@@ -7,7 +7,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "./App.css";
-import Home from "./assets/Home/home";
+import Home from "./assets/home/home";
 import MovieDetails from "./assets/movie/movieDetails";
 
 const Root = () => {
