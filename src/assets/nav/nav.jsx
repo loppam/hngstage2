@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SEARCH_URL =
-  "https://api.themoviedb.org/3/search/movie?sort_by=popularity.desc&api_key=a791ad0f144ddfcc6ebe3aa512ef4f43&query=";
+  "https://api.themoviedb.org/3/search/movie?sort_by=popularity.desc&api_key=bb6fd6bd97e27b173c02b42a096e5fb2&query=";
 
 const Nav = ({ setMovies, setTitle }) => {
   const [searchTerm, setSearchTerm] = useState("");

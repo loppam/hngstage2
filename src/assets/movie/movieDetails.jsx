@@ -7,7 +7,7 @@ import rate from "../../Images/Group55.png";
 import bottom from "../../Images/Group61.png";
 import "./movieDetails.css";
 import { useEffect, useState } from "react";
-const API_KEY = "5cedf290c2dd581f3b1b6ed4c6562713";
+const API_KEY = "bb6fd6bd97e27b173c02b42a096e5fb2";
 
 const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
 
