@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import requests from "../../requests";
 import Row from "../row/row";
-import Banner from "../header/header";
+import Header from "../header/header";
 import Nav from "../nav/nav";
 const API_KEY = "bb6fd6bd97e27b173c02b42a096e5fb2";
 const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
@@ -36,7 +36,7 @@ function Home() {
         title={title}
         setTitle={setTitle}
       />
-      <Banner fetchUrl={requests.fetchTrending} />
+      <Header fetchUrl={requests.fetchTrending} />
       <Row
         movies={movies}
         setMovies={setMovies}
