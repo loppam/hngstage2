@@ -3,7 +3,7 @@
 import { useParams } from "react-router-dom";
 import ticket from "../../Images/ticket.png";
 import rate from "../../Images/rating.png";
-// import list from "../../Images/list.png";
+import list from "../../Images/list.png";
 import "./movieDetails.css";
 import { useEffect, useState } from "react";
 const API_KEY = "bb6fd6bd97e27b173c02b42a096e5fb2";
@@ -22,7 +22,7 @@ const MovieDetails = () => {
       })
       .catch((error) => {
         console.error("Error fetching movie details:", error);
-        // alert('There is an error fetching the Movies please reload the page')
+        alert('There is an error fetching the Movies please reload the page')
       });
   }, [id]);
 
@@ -64,7 +64,7 @@ const MovieDetails = () => {
             </div>
             <div className="movie_info_right">
               <button className="show"><img src={ticket} alt="" />See Showtimes</button>
-              {/* <button className="more"><img src={list} alt="" />See Showtimes</button> */}
+              <button className="more"><img src={list} alt="" />See Showtimes</button>
             </div>
           </div>
         </div>

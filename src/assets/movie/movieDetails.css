@@ -67,6 +67,7 @@ p {
   padding: 0.81rem 5.38rem;
   align-items: center;
   display: flex;
+  gap: 0.3rem;
 }
 
 .more {
@@ -80,12 +81,14 @@ p {
   border: 1px solid #be123c;
   background: rgba(190, 18, 60, 0.1);
   display: flex;
+  gap: 0.3rem;
   padding: 0.81rem 5.38rem;
   align-items: center;
 }
 .movie_info{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .movie_info_left{
     max-width: 40rem;
