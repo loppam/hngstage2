@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-.movie__details {
-  display: flex;
-}
 
-h3 {
-  font-size: 24px;
-}
-p {
-  font-size: 20px;
+.movie-overview {
+  color: #333;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .middle {
   width: 70%;

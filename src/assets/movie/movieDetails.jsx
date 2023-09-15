@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import ticket from "../../Images/ticket.png";
 import rate from "../../Images/rating.png";
 import list from "../../Images/list.png";
-import topRated from "../../Images/topRated.png"
-import extra from "../../Images/extra.png"
+import topRated from "../../Images/topRated.png";
+import extra from "../../Images/extra.png";
 
 import "./movieDetails.css";
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ const MovieDetails = () => {
       })
       .catch((error) => {
         console.error("Error fetching movie details:", error);
-        alert('There is an error fetching the Movies please reload the page')
+        alert("There is an error fetching the Movies please reload the page");
       });
   }, [id]);
 
@@ -67,8 +67,14 @@ const MovieDetails = () => {
               <img src={topRated} alt="" />
             </div>
             <div className="movie_info_right">
-              <button className="show"><img src={ticket} alt="" />See Showtimes</button>
-              <button className="more"><img src={list} alt="" />See Showtimes</button>
+              <button className="show">
+                <img src={ticket} alt="" />
+                See Showtimes
+              </button>
+              <button className="more">
+                <img src={list} alt="" />
+                See Showtimes
+              </button>
 
               <img className="extra" src={extra} alt="" />
             </div>
