@@ -5,17 +5,18 @@ const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
 const Movie = ({ title, poster_path, vote_average, id, release_date }) => {
   let vote = (vote_average / 10) * 100;
   let roundedVote = parseFloat(vote.toFixed(1));
+  let UTCDate = new Date(release_date)
 
   return (
-    <div className="row_poster">
-      <Link to={`/details/${id}`}>
+    <div className="row_poster" data-testid='movie-card'>
+      <Link to={`/movies/${id}`}>
         <img
           data-testid="movie-poster"
           className="poster"
           src={IMAGE_PATH + poster_path}
           alt={title}
         />
-        <p data-testid="movie-release-date">{release_date}</p>
+        <p data-testid="movie-release-date">{UTCDate.toDateString()}</p>
         <p data-testid="movie-title" className="row__title">
           {title}
         </p>

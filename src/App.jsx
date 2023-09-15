@@ -6,7 +6,7 @@ const App = () => {
   return <div className="App">
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/details/:id" element={<MovieDet />} />
+      <Route path="/movies/:id" element={<MovieDet />} />
     </Routes>
   </div>;
 };

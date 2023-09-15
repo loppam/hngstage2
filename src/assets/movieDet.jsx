@@ -25,7 +25,7 @@ const MovieDetails = () => {
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
-
+  let UTCDate = new Date(movieDetails.release_date)
   return (
     <div className="movie__details">
       <div className="middle">
@@ -44,7 +44,7 @@ const MovieDetails = () => {
                 </h3>
                 <div className="point">•</div>
                 <h3 data-testid="movie-release-date">
-                  {movieDetails.release_date}
+                  {UTCDate.toDateString()}
                 </h3>
                 <div className="point">•</div>
                 <h3 data-testid="movie-title">73min</h3>
