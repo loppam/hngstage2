@@ -1,4 +1,4 @@
-.nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
   margin: 2rem auto;
 }
 
-.nav_title,
+.navbar_title,
 .nav_menu {
   display: flex;
   justify-content: space-between;
@@ -53,19 +53,18 @@
   /* font-size: 24px; */
 }
 
-
 @media (max-width: 930px) {
-    .search input {
-        width: 300px;
-    }
+  .search input {
+    width: 300px;
+  }
 }
 @media (max-width: 690px) {
-    .nav_title h2 {
-        display: none;
-    }
+  .navbar_title h2 {
+    display: none;
+  }
 }
 @media (max-width: 510px) {
-    .nav_menu button {
-        display: none;
-    }
+  .nav_menu button {
+    display: none;
+  }
 }

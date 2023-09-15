@@ -1,41 +1,14 @@
-// App.js
-import {
-  Outlet,
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./assets/home/home";
-import MovieDetails from "./assets/movie/movieDetails";
-
-const Root = () => {
-  return (
-    <>
-      <div></div>
-      <div>
-        <Outlet />
-      </div>
-    </>
-  );
+import Homepage from "./assets/homepage"
+import MovieDet from "./assets/movieDet"
+const App = () => {
+  return <div className="App">
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/details/:id" element={<MovieDet />} />
+    </Routes>
+  </div>;
 };
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route index element={<Home />} />
-      <Route path="/movieDetails/:id" element={<MovieDetails />} />
-    </Route>
-  )
-);
-
-function App() {
-  return (
-    <div className="app">
-      <RouterProvider router={router} />
-    </div>
-  );
-}
 
 export default App;

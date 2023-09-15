@@ -1,14 +1,7 @@
 /* eslint-disable react/prop-types */
-// import { useParams } from "react-router-dom"
 import { useParams } from "react-router-dom";
-import ticket from "../../Images/ticket.png";
-import rate from "../../Images/rating.png";
-import list from "../../Images/list.png";
-import topRated from "../../Images/topRated.png";
-import extra from "../../Images/extra.png";
-
-import "./movieDetails.css";
 import { useEffect, useState } from "react";
+import "../App.css"
 const API_KEY = "bb6fd6bd97e27b173c02b42a096e5fb2";
 
 const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
@@ -59,24 +52,24 @@ const MovieDetails = () => {
                 <h3> {movieDetails.vote_average}</h3>
               </div>
             </div>
-            <img src={rate} alt="rate" className="movie_det_right" />
+            <img src="/img/rating.png" alt="rate" className="movie_det_right" />
           </div>
           <div className="movie_info">
             <div className="movie_info_left">
               <p data-testid="movie-overview">{movieDetails.overview}</p>
-              <img src={topRated} alt="" />
+              <img src="/img/topRated.png" alt="" />
             </div>
             <div className="movie_info_right">
               <button className="show">
-                <img src={ticket} alt="" />
+                <img src="/img/ticket.png" alt="" />
                 See Showtimes
               </button>
               <button className="more">
-                <img src={list} alt="" />
+                <img src="/img/list.png" alt="" />
                 See Showtimes
               </button>
 
-              <img className="extra" src={extra} alt="" />
+              <img className="extra" src="/img/extra.png" alt="" />
             </div>
           </div>
         </div>

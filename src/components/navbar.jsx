@@ -1,20 +1,24 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/rules-of-hooks */
+import React from "react";
 import { useState } from "react";
-import menu from "../../Images/Menu.png";
-import tv from "../../Images/tv.png";
-import "./nav.css";
+import "./navbar.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const SEARCH_URL =
-  "https://api.themoviedb.org/3/search/movie?sort_by=popularity.desc&api_key=bb6fd6bd97e27b173c02b42a096e5fb2&query=";
+const navbar = ({ setMovies, setTitle }) => {
+  const API_KEY = "bb6fd6bd97e27b173c02b42a096e5fb2";
+  const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?sort_by=popularity.desc&api_key=${API_KEY}&query=`;
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
-const Nav = ({ setMovies, setTitle }) => {
+  const notifyUser = (message) => {
+    toast(message);
+  };
   const [searchTerm, setSearchTerm] = useState("");
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(SEARCH_URL + searchTerm);
       if (!response.ok) {
@@ -24,24 +28,16 @@ const Nav = ({ setMovies, setTitle }) => {
       setMovies(data.results);
       setTitle("Searched Results");
 
-      notify("Loaded Successfully");
+      notifyUser("Loaded Successfully");
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const notify = (message) => {
-    toast(message);
-  };
-
   return (
-    <div className="nav">
-      <div className="nav_title">
-        <img src={tv} alt="tv logo" />
+    <div className="navbar">
+      <div className="navbar_title">
+        <img src="/img/tv.png" alt="Logo" />
         <h2>MovieBox</h2>
       </div>
       <form onSubmit={handleSubmit}>
@@ -71,7 +67,7 @@ const Nav = ({ setMovies, setTitle }) => {
       </form>
       <div className="nav_menu">
         <button>Sign in</button>
-        <img src={menu} alt="menu button" />
+        <img src="/img/menu.png" alt="menu button" />
         <ToastContainer
           position="top-center"
           autoClose={2000}
@@ -89,4 +85,4 @@ const Nav = ({ setMovies, setTitle }) => {
   );
 };
 
-export default Nav;
+export default navbar;
