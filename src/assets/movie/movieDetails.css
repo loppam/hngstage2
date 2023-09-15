@@ -28,6 +28,7 @@ p {
 .movie_det_title {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.7rem;
 }
 .movie_det_title h3 {
@@ -92,4 +93,11 @@ p {
 }
 .movie_info_left{
     max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+}
+
+.movie_info_left img{
+    width: 100%;
 }
