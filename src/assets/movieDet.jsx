@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "../App.css"
+import "../App.css";
 const API_KEY = "bb6fd6bd97e27b173c02b42a096e5fb2";
 
 const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
@@ -25,7 +25,7 @@ const MovieDetails = () => {
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
-  let UTCDate = new Date(movieDetails.release_date)
+  let UTCDate = new Date(movieDetails.release_date);
   return (
     <div className="movie__details">
       <div className="middle">
