@@ -70,7 +70,7 @@ const MovieDetails = () => {
               <button className="show"><img src={ticket} alt="" />See Showtimes</button>
               <button className="more"><img src={list} alt="" />See Showtimes</button>
 
-              <img src={extra} alt="" />
+              <img className="extra" src={extra} alt="" />
             </div>
           </div>
         </div>
